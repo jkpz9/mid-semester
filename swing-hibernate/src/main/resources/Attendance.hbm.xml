@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="itus.course.qc2015.king.model.Attendance" table="attendances">
+      <id name="id" type="int">
+         <generator class="identity"/>
+      </id>
+      <property name="Presence" type="int" >
+          <column name="presence" length="1"/>
+      </property>
+      <property name="Week" type="int" column="week"/>
+      <property name="SubjectId" type = "string">
+      <column name="subjectid" length="7"/>
+       </property>
+        <property name="StudentId" type = "string">
+      <column name="studentid" length="7"/>
+       </property>
+   </class>
+</hibernate-mapping>

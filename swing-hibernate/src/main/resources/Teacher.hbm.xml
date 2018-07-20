@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="itus.course.qc2015.king.model.Teacher" table="teachers">
+      <id name="Id" type="string">
+      	<column name="id" length="7"/>
+         <generator class="assigned"/>
+      </id>
+      
+      <property name="FullName" type="string">
+      	<column name="fullname" length="50"/>
+      </property>
+      
+      <property name="JoinDate" type="date" column="joindate"/>
+      
+      <property name="UserName" type="string">
+        <column name="username" length="20"/>
+       </property>
+      <property name = "EncrytedPassword" type = "string">
+      	<column name="encryptedpassword" length="1000"/>
+      </property>
+      
+   </class>
+</hibernate-mapping>

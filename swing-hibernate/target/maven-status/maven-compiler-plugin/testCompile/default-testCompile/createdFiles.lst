@@ -1,0 +1,17 @@
+itus\course\qc2015\king\attendance\TestAttendanceFetchById.class
+itus\course\qc2015\king\student\TestLogin.class
+itus\course\qc2015\king\subject\TestInsertion.class
+itus\course\qc2015\king\teacher\TestUpdation.class
+itus\course\qc2015\king\student\TestDeletion.class
+itus\course\qc2015\king\util\TestPeriodLogical.class
+itus\course\qc2015\king\subject\TestFetchById.class
+itus\course\qc2015\king\student\TestFetchById.class
+itus\course\qc2015\king\student\TestFetchAll.class
+itus\course\qc2015\king\security\HashPassword.class
+itus\course\qc2015\king\subject\TestUpdation.class
+itus\course\qc2015\king\attendance\TestFetchBySubject.class
+itus\course\qc2015\king\utilOperation\Validation.class
+itus\course\qc2015\king\student\TestUpdation.class
+itus\course\qc2015\king\student\TestInsertion.class
+itus\course\qc2015\king\teacher\TestInsertion.class
+itus\course\qc2015\king\attendance\TestFetchAllSpecificedStudentWithSubject.class

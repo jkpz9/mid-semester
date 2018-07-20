@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="itus.course.qc2015.king.model.Student" table="students">
+      <id name="NumberId" type="string">
+      	<column name="id" length="7"/>
+         <generator class="assigned"/>
+      </id>
+      <property name="FullName" type="string">
+      	<column name="fullname" length="50"/>
+      </property>
+      
+      <property name="Major" type="string">
+        <column name="major" length="50"/>
+       </property>
+       
+      <property name="Course" type = "int">
+      <column name="course" length="4"/>
+       </property>
+       <property name="ToTalLoggedNumber" type="int">
+      <column name="totalloggednumber" length="4"/>
+       </property>
+      <property name = "UserName" type = "string">
+      	<column name="username" length="20"/>
+      </property>
+       
+      <property name = "EncrytedPassword" type = "string">
+      	<column name="encryptedpassword" length="1000"/>
+      </property>
+       <set name="subjectz" fetch="join" lazy="false" 
+            cascade="save-update" table="student_subject">
+          <key>
+              <column length="7" name="studentid"/>
+          </key>
+          <many-to-many entity-name="itus.course.qc2015.king.model.Subject">
+          <column length="7" name="subjectid"/>
+          </many-to-many>
+      </set>
+      
+<!--      <set name="attends" fetch="join" lazy="false" 
+            cascade="save-update" table="student_subject_attend">
+          <key>
+              <column length="7" name="studentid"/>
+          </key>
+          <many-to-many entity-name="itus.course.qc2015.king.model.Subject"> 
+          <column length="7" name="subjectid"/>
+          </many-to-many>
+      </set>-->
+   </class>
+</hibernate-mapping>
